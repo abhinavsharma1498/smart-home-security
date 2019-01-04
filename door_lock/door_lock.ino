@@ -7,8 +7,8 @@
 SoftwareSerial esp(18, 19);// RX, TX
 
 //  Wifi credentials
-const String ssid = "Abhinav";
-const String wifipass = "abcdefgh";
+const String ssid = "your-ssid";  // Update here
+const String wifipass = "you-password"; // Update here
 //  ThingSpeak API Setting
 const String host = "api.thingspeak.com";
 const String port = "80";
@@ -80,7 +80,7 @@ void WifiConnect()
 //  Send a Mail
 void SndMail()
 {
-  String data = "GET https://api.thingspeak.com/update?api_key=MKPF39C8C5SBDP1P&field1="+master;
+  String data = "GET https://api.thingspeak.com/update?api_key=\your-api-key="+master;  //  Update here
   SndCmd("AT+CIPSTART=\"TCP\",\""+host+"\","+port, "OK", 15);
   SndCmd("AT+CIPSEND="+String(data.length()+2), ">", 4);
   esp.println(data);
