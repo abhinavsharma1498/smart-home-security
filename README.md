@@ -1,4 +1,4 @@
-# Password Based Door Lock System
+# Smart Home Security System
 This project provides a security solution for houses using an arduino kit.
 
 # Motivation
